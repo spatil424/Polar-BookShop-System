@@ -26,9 +26,9 @@ jobs:
        with:
          distribution: temurin
          java-version: 17
-         cache: mvnw
+         cache: maven
      - name: Build, unit tests and integration tests
        run: |
         cd ${{matrix.project}}
-        chmod +x mvn
-        ./mvn build
+        chmod +x mvnw
+        ./mvnw build
